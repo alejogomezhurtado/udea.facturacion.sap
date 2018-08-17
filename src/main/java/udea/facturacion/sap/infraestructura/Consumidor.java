@@ -12,8 +12,7 @@ public class Consumidor implements MessageListener {
 
     @Override
     public void onMessage(Message message) {
-        Registro registro = new Registro();
-        CompletableFuture.runAsync(() -> registro.crear(new String(message.getBody())));
+        Registro.crear(new String(message.getBody()));
         System.out.println(new String(message.getBody()));
     }
 }
