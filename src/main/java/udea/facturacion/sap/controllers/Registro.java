@@ -4,9 +4,9 @@ import udea.facturacion.sap.infraestructura.Publicador;
 
 public class Registro {
 
-    Publicador publicador = new Publicador();
+    private static Publicador publicador = new Publicador();
 
-    public void crear(String message){
+    public static void crear(String message){
         publicador.publicarMensaje("facturacion.contabilizada", "", message);
     }
 }
