@@ -35,4 +35,13 @@ public class DtoFactura {
     public void setIdCliente(Integer idCliente) {
         this.idCliente = idCliente;
     }
+
+	@Override
+	public String toString() {
+		return "DtoFactura{" +
+						"numeroFactura=" + numeroFactura +
+						", valorTotal=" + valorTotal +
+						", idCliente=" + idCliente +
+						'}';
+	}
 }
